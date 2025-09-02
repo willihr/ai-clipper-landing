@@ -37,7 +37,7 @@ const Home = () => {
     Sal();
 
     const intervalId = setInterval(() => {
-      setVisibleIndex((prevIndex) => (prevIndex + 1) % 3);
+      setVisibleIndex((prevIndex) => (prevIndex + 1) % 4);
     }, 2000);
 
     return () => {
@@ -55,59 +55,71 @@ const Home = () => {
           <div className="row justify-content-center">
             <div className="col-lg-12">
               <div className="inner text-center mt--140">
-                <h1 className="title display-one">
-                  Examine the Potential of
+                <h1 className="title display-one !text-[64px] !leading-none">
+                  Transforme vídeos longos em
                   <br />{" "}
                   <span className="header-caption">
                     <span className="cd-headline rotate-1">
-                      <span className="cd-words-wrapper">
+                      <span className="cd-words-wrapper !w-[510px] !text-[64px]">
                         <b
                           className={
                             visibleIndex === 0
-                              ? "is-visible theme-gradient"
-                              : "is-hidden theme-gradient"
+                              ? "is-visible theme-gradient !normal-case tracking-[-0.08em] pr-[0.08em]"
+                              : "is-hidden theme-gradient !normal-case tracking-[-0.08em] pr-[0.08em]"
                           }
                         >
-                          AI Chating
-                        </b>
-                        <b
-                          className={
-                            visibleIndex === 1
-                              ? "is-visible theme-gradient"
-                              : "is-hidden theme-gradient"
-                          }
-                        >
-                          AI Writing
+                          dezenas de cortes
                         </b>
                         <b
                           className={
                             visibleIndex === 2
-                              ? "is-visible theme-gradient"
-                              : "is-hidden theme-gradient"
+                              ? "is-visible theme-gradient !normal-case tracking-[-0.03em] pr-[0.03em]"
+                              : "is-hidden theme-gradient !normal-case tracking-[-0.03em] pr-[0.03em]"
                           }
                         >
-                          AI Chating
+                          presença digital
+                        </b>
+                        <b
+                          className={
+                            visibleIndex === 1
+                              ? "is-visible theme-gradient !normal-case tracking-[0.03em]"
+                              : "is-hidden theme-gradient !normal-case tracking-[0.03em]"
+                          }
+                        >
+                          conteúdo viral
+                        </b>
+                        <b
+                          className={
+                            visibleIndex === 3
+                              ? "is-visible theme-gradient !normal-case tracking-[0.02em]"
+                              : "is-hidden theme-gradient !normal-case tracking-[0.02em]"
+                          }
+                        >
+                          + engajamento
                         </b>
                       </span>
                     </span>
                   </span>{" "}
-                  AI Hack
+                  em minutos
                 </h1>
-                <p className="description">
-                  Unleash Brainwave's AI potential. Use the open AI <br />{" "}
-                  conversation app Rainbow theme
+                <p className="description !text-[20px] opacity-80">
+                  A AIClipper entende seu conteúdo, gera cortes prontos para viralizar e os publica em todas as suas redes sociais com um único clique.
                 </p>
-                <div className="form-group">
-                  <textarea
-                    name="text"
-                    id="slider-text-area"
-                    cols="30"
-                    rows="2"
-                    placeholder="Enter a prompt, for example: a fundraising deck to a mobile finance app called Intuitive"
-                  ></textarea>
-                  <Link className="btn-default " href="/text-generator">
-                    Start with AI
-                  </Link>
+                
+                <div className="flex items-center space-x-4 w-full max-w-[660px]">
+                  <div className="flex-grow bg-[#2D313E] rounded-full p-2 flex items-center shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-gray-400 mx-3 flex-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                    </svg>
+                    <input type="text" placeholder="Cole um link aqui" className="w-full !pl-0 !rounded-none bg-transparent text-gray-700 placeholder-gray-500 text-base !border-none focus:ring-0 outline-none" />
+                    <button className="btn-default flex-none !rounded-full">
+                      Obter clipes grátis
+                    </button>
+                  </div>
+                  <span className="text-gray-300 text-[14px]">ou</span>
+                  <button className="rainbow-gradient-btn without-shape-circle flex-none">
+                    <span>Carregar arquivo</span>
+                  </button>
                 </div>
                 <div className="inner-shape">
                   <Image
