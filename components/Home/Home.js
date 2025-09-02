@@ -196,7 +196,7 @@ const Home = () => {
                 data-sal-delay="100"
               >
                 <p className="b1 mb--0 small-title">
-                  truest 800,000+ HIGHLY PRODUCTIVE Company
+                  A ferramenta que acelera o crescimento de milhares de criadores
                 </p>
               </div>
             </div>
