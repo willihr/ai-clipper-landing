@@ -113,7 +113,7 @@ const Home = () => {
                     </svg>
                     <input type="text" placeholder="Cole um link aqui" className="w-full !pl-0 !rounded-none bg-transparent text-gray-700 placeholder-gray-500 text-base !border-none focus:ring-0 outline-none" />
                     <button className="btn-default flex-none !rounded-full">
-                      Obter clipes grátis
+                      Obter cortes grátis
                     </button>
                   </div>
                   <span className="text-gray-300 text-[14px]">ou</span>
