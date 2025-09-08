@@ -279,17 +279,16 @@ const Home = () => {
                 data-sal-delay="100"
               >
                 <h4 className="subtitle ">
-                  <span className="theme-gradient">AI Collaboration</span>
+                  <span className="theme-gradient">Sua Máquina de Conteúdo</span>
                 </h4>
                 <h2 className="title mb--20">
-                  AI Chat app for seamless
-                  <br /> collaboration
+                  Um único vídeo rende um mês de clipes virais
                 </h2>
                 <Link
-                  className="btn-default btn-large color-blacked"
+                  className="btn-default btn-large"
                   href="/contact"
                 >
-                  Try It Now{" "}
+                  Teste Grátis Agora{" "}
                   <i className="fa-sharp fa-light fa-arrow-right ml--5"></i>
                 </Link>
               </div>
