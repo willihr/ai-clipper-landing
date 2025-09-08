@@ -9,7 +9,6 @@ import PricingData from "../../data/pricing.json";
 
 import SplitImg from "../../public/images/split/split-2.png";
 import SplitLogo from "../../public/images/split/split-2-logo.png";
-import bannerImg from "../../public/images/bg/slider-main-image.png";
 import shapeOne from "../../public/images/bg/icon-shape/icon-shape-one.png";
 import shapeTwo from "../../public/images/bg/icon-shape/icon-shape-two.png";
 import shapeThree from "../../public/images/bg/icon-shape/icon-shape-three.png";
@@ -153,15 +152,9 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-11 col-xl-11 justify-content-center">
-              <div className="slider-frame">
-                <Image
-                  className="slider-image-effect"
-                  src={bannerImg}
-                  width={1055}
-                  height={898}
-                  alt="Banner Images"
-                />
+            <div className="col-lg-9 col-xl-9 justify-content-center">
+              <div className="slider-frame !bg-cover before:!bg-cover">
+                <video className="w-full" src="/hero-banner-video.webm" autoPlay muted loop />
               </div>
             </div>
           </div>
