@@ -24,7 +24,7 @@ const CtaOne = () => {
                 data-sal-duration="400"
                 data-sal-delay="200"
               >
-                Join our aI Experts community
+                Sua rotina, transformada. Seu conteúdo, multiplicado
               </h4>
               <p
                 className="sal-animate"
@@ -32,8 +32,7 @@ const CtaOne = () => {
                 data-sal-duration="400"
                 data-sal-delay="300"
               >
-                Meet and learn from 80+ creators & companies who share how thay
-                use AI to create better content at lightning speed.
+                Milhares de criadores já economizam horas de trabalho e alcançam mais pessoas. Chegou a sua vez de criar mais, com menos esforço.
               </p>
             </div>
           </div>
@@ -55,7 +54,7 @@ const CtaOne = () => {
                 />
               </div>
               <Link className="btn-default" href="#">
-                Join Now Today Free
+                Multiplicar meu Conteúdo
               </Link>
             </div>
           </div>
