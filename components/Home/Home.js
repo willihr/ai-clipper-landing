@@ -279,10 +279,10 @@ const Home = () => {
                 data-sal-delay="100"
               >
                 <h4 className="subtitle ">
-                  <span className="theme-gradient">Sua Máquina de Conteúdo</span>
+                  <span className="theme-gradient">Sua Própria Máquina de Conteúdo</span>
                 </h4>
                 <h2 className="title mb--20">
-                  Um único vídeo rende um mês de clipes virais
+                  Um vídeo rende um mês inteiro de clipes virais
                 </h2>
                 <Link
                   className="btn-default btn-large"
