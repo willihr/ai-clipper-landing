@@ -103,7 +103,7 @@ const Home = () => {
                   em minutos
                 </h1>
                 <p className="description !text-[20px] opacity-80">
-                  A AIClipper entende seu conteúdo, gera cortes prontos para viralizar e os publica em todas as suas redes sociais com um único clique.
+                  A ViroClip entende seu conteúdo, gera cortes prontos para viralizar e os publica em todas as suas redes sociais com um único clique.
                 </p>
                 
                 <div className="flex items-center space-x-4 w-full max-w-[660px]">
