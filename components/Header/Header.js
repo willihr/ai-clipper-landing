@@ -1,13 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 
 import { useAppContext } from "@/context/Context";
 
-import logo from "../../public/images/logo/logo.png";
+import Logo from "./Logo";
 import Nav from "./Nav";
 
 const Header = ({ headerTransparent, headerSticky, btnClass }) => {
@@ -48,13 +47,7 @@ const Header = ({ headerTransparent, headerSticky, btnClass }) => {
             <div className="col-lg-2 col-md-6 col-6">
               <div className="logo">
                 <Link href="/home">
-                  <Image
-                    className="logo-light"
-                    src={logo}
-                    width={135}
-                    height={35}
-                    alt="ChatBot Logo"
-                  />
+                  <Logo className="text-[#eee]" height={40} />
                 </Link>
               </div>
             </div>
