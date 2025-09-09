@@ -273,7 +273,7 @@ const Home = () => {
                 data-sal-delay="100"
               >
                 <h4 className="subtitle ">
-                  <span className="theme-gradient">Sua Própria Máquina de Conteúdo</span>
+                  <span className="theme-gradient">Sua Máquina de Conteúdo Viral</span>
                 </h4>
                 <h2 className="title mb--20">
                   Um vídeo rende um mês inteiro de clipes virais
