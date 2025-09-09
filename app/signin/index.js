@@ -51,6 +51,12 @@ const SigninPage = () => {
                         <span>Or continue with</span>
                         <hr />
                       </div> */}
+                      <div className="section-title">
+                        <h4 className="title mb--0">Bem-vindo(a) de volta!</h4>
+                        <p className="description">
+                          Digite seu e-mail e senha para continuar.
+                        </p>
+                      </div>
                       <form>
                         <div className="input-section mail-section">
                           <div className="icon">
@@ -58,30 +64,30 @@ const SigninPage = () => {
                           </div>
                           <input
                             type="email"
-                            placeholder="Enter email address"
+                            placeholder="Digite seu endereço de e-mail"
                           />
                         </div>
                         <div className="input-section password-section">
                           <div className="icon">
                             <i className="fa-sharp fa-regular fa-lock"></i>
                           </div>
-                          <input type="password" placeholder="Password" />
+                          <input type="password" placeholder="Digite sua senha" />
                         </div>
                         <div className="forget-text">
                           <a className="btn-read-more" href="#">
-                            <span>Forgot password</span>
+                            <span>Esqueceu sua senha?</span>
                           </a>
                         </div>
                         <button type="submit" className="btn-default">
-                          Sign In
+                          Entrar
                         </button>
                       </form>
                     </div>
                     <div className="signup-box-footer">
                       <div className="bottom-text">
-                        Don't have an account?{" "}
+                        Não tem uma conta?{" "}
                         <a className="btn-read-more ml--5" href="/signup">
-                          <span>Sign Up</span>
+                          <span>Cadastre-se</span>
                         </a>
                       </div>
                     </div>
