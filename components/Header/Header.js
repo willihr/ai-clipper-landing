@@ -16,9 +16,9 @@ const Header = ({ headerTransparent, headerSticky, btnClass }) => {
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
-    if (pathname === "/") {
-      router.push("/home");
-    }
+    // if (pathname === "/") {
+    //   router.push("/home");
+    // }
 
     const handleScroll = () => {
       const scrolled = window.scrollY;
@@ -60,13 +60,13 @@ const Header = ({ headerTransparent, headerSticky, btnClass }) => {
 
             <div className="col-lg-2 col-md-6 col-6 position-static">
               <div className="header-right">
-                <div className="header-btn">
+                <div className="header-btn !block">
                   <Link className={`${btnClass}`} href="/text-generator">
                     <span>Comece Grátis</span>
                   </Link>
                 </div>
 
-                <div className="mobile-menu-bar ml--5 d-flex justify-content-end d-lg-none">
+                {/* <div className="mobile-menu-bar ml--5 d-flex justify-content-end d-lg-none">
                   <div className="hamberger">
                     <button
                       className="hamberger-button"
@@ -75,7 +75,7 @@ const Header = ({ headerTransparent, headerSticky, btnClass }) => {
                       <i className="fa-sharp fa-regular fa-bars"></i>
                     </button>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
