@@ -53,16 +53,16 @@ const Header = ({ headerTransparent, headerSticky, btnClass }) => {
             </div>
 
             <div className="col-lg-8 d-none d-lg-block">
-              <nav className="mainmenu-nav d-none d-lg-flex justify-content-center">
+              {/* <nav className="mainmenu-nav d-none d-lg-flex justify-content-center">
                 <Nav />
-              </nav>
+              </nav> */}
             </div>
 
             <div className="col-lg-2 col-md-6 col-6 position-static">
               <div className="header-right">
                 <div className="header-btn">
                   <Link className={`${btnClass}`} href="/text-generator">
-                    <span>Get Start</span>
+                    <span>Comece Grátis</span>
                   </Link>
                 </div>
 
