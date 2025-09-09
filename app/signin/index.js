@@ -22,7 +22,7 @@ const SigninPage = () => {
                   </div>
                   <div className="signup-box-bottom">
                     <div className="signup-box-content">
-                      <div className="social-btn-grp">
+                      {/* <div className="social-btn-grp">
                         <a className="btn-default btn-border" href="#">
                           <span className="icon-left">
                             <Image
@@ -50,7 +50,7 @@ const SigninPage = () => {
                         <hr />
                         <span>Or continue with</span>
                         <hr />
-                      </div>
+                      </div> */}
                       <form>
                         <div className="input-section mail-section">
                           <div className="icon">
@@ -146,9 +146,9 @@ const SigninPage = () => {
               </div>
             </div>
           </div>
-          <Link className="close-button" href="/">
+          {/* <Link className="close-button" href="/">
             <i className="fa-sharp fa-regular fa-x"></i>
-          </Link>
+          </Link> */}
         </div>
       </main>
     </>
