@@ -19,10 +19,10 @@ const HomePage = () => {
             headerSticky="header-sticky"
             btnClass="rainbow-gradient-btn"
           />
-          <PopupMobileMenu />
+          {/* <PopupMobileMenu /> */}
 
           <Home />
-          <Footer />
+          {/* <Footer /> */}
           <Copyright />
         </Context>
       </main>
