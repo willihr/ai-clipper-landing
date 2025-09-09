@@ -105,7 +105,7 @@ const Home = () => {
                 <p className="description !text-[20px] opacity-80">
                   A ViroClip entende seu conteúdo, gera cortes prontos para viralizar e os publica em todas as suas redes sociais com poucos cliques.
                 </p>
-                
+
                 <div className="flex items-center space-x-4 w-full max-w-[680px]">
                   <div className="flex-grow bg-[#2D313E] rounded-full p-2 flex items-center shadow-lg">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-gray-400 mx-3 flex-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -195,15 +195,15 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="row">
+          {/* <div className="row">
             <div className="col-lg-12 mt--10">
               <BrandList />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
-      <div className="rainbow-service-area rainbow-section-gap">
+      {/* <div className="rainbow-service-area rainbow-section-gap">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -226,9 +226,9 @@ const Home = () => {
           </div>
           <TabStyleOne />
         </div>
-      </div>
+      </div> */}
 
-      <div className="rainbow-service-area rainbow-section-gap rainbow-section-gapBottom-big">
+      {/* <div className="rainbow-service-area rainbow-section-gap rainbow-section-gapBottom-big">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -249,9 +249,9 @@ const Home = () => {
           </div>
         </div>
         <ServiceStyleOne />
-      </div>
+      </div> */}
 
-      <div className="rainbow-advance-tab-area aiwave-bg-gradient rainbow-section-gap-big">
+      {/* <div className="rainbow-advance-tab-area aiwave-bg-gradient rainbow-section-gap-big">
         <div className="container">
           <div className="html-tabs" data-tabs="true">
             <AdvanceTab />
@@ -260,7 +260,7 @@ const Home = () => {
         <div className="bg-shape">
           <Image src={bgShape} width={630} height={879} alt="Bg Shape" />
         </div>
-      </div>
+      </div> */}
 
       <div className="rainbow-collobration-area rainbow-section-gap-big">
         <div className="container">
@@ -308,13 +308,13 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="rainbow-rn-cta">
+      <div className="rainbow-rn-cta rainbow-section-gapBottom-big">
         <div className="container">
           <CtaOne />
         </div>
       </div>
 
-      <div className="aiwave-pricing-area wrapper rainbow-section-gap-big">
+      {/* <div className="aiwave-pricing-area wrapper rainbow-section-gap-big">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -374,17 +374,17 @@ const Home = () => {
             gap="mt_dec--40"
           />
         </div>
-      </div>
+      </div> */}
 
-      <div className="aiwave-service-area rainbow-section-gap">
+      {/* <div className="aiwave-service-area rainbow-section-gap">
         <div className="container">
           <div className="row row--15 service-wrapper">
             <ServiceTwo />
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className="rainbow-testimonial-area rainbow-section-gap">
+      {/* <div className="rainbow-testimonial-area rainbow-section-gap">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -403,9 +403,9 @@ const Home = () => {
           </div>
         </div>
         <Testimonial />
-      </div>
+      </div> */}
 
-      <div className="rainbow-brand-area rainbow-section-gap">
+      {/* <div className="rainbow-brand-area rainbow-section-gap">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -446,13 +446,13 @@ const Home = () => {
             />
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className="rainbow-cta-area rainbow-section-gap rainbow-section-gapBottom-big">
+      {/* <div className="rainbow-cta-area rainbow-section-gap rainbow-section-gapBottom-big">
         <div className="container">
           <CtaTwo />
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
