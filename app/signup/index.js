@@ -8,6 +8,7 @@ import userImg from "../../public/images/team/team-02sm.jpg";
 import brandImg from "../../public/images/brand/brand-t.png";
 import google from "../../public/images/sign-up/google.png";
 import facebook from "../../public/images/sign-up/facebook.png";
+import Logo from "../../components/Header/Logo";
 
 const SignupPage = () => {
   return (
@@ -19,12 +20,7 @@ const SignupPage = () => {
               <div className="col-lg-6 bg-color-blackest left-wrapper">
                 <div className="sign-up-box">
                   <div className="signup-box-top">
-                    <Image
-                      src={logo}
-                      width={193}
-                      height={50}
-                      alt="sign-up logo"
-                    />
+                    <Logo className="text-[#eee]" height={50} />
                   </div>
                   <div className="signup-box-bottom">
                     <div className="signup-box-content">
