@@ -53,7 +53,7 @@ const CtaOne = () => {
                   alt="Group Image"
                 />
               </div>
-              <Link className="btn-default" href="#">
+              <Link className="btn-default" href="/signup">
                 Multiplicar meu Conteúdo
               </Link>
             </div>

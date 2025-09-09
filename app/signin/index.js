@@ -18,7 +18,9 @@ const SigninPage = () => {
               <div className="col-lg-12 bg-color-blackest left-wrapper">
                 <div className="sign-up-box">
                   <div className="signup-box-top">
-                    <Logo className="text-[#eee]" height={50} />
+                    <Link href="/">
+                      <Logo className="text-[#eee]" height={50} />
+                    </Link>
                   </div>
                   <div className="signup-box-bottom">
                     <div className="signup-box-content">
@@ -86,9 +88,9 @@ const SigninPage = () => {
                     <div className="signup-box-footer">
                       <div className="bottom-text">
                         Não tem uma conta?{" "}
-                        <a className="btn-read-more ml--5" href="/signup">
+                        <Link className="btn-read-more ml--5" href="/signup">
                           <span>Cadastre-se</span>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>

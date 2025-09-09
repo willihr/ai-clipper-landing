@@ -112,14 +112,14 @@ const Home = () => {
                       <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                     </svg>
                     <input type="text" placeholder="Cole um link aqui" className="w-full !pl-0 !rounded-none bg-transparent text-gray-700 placeholder-gray-500 text-base !border-none focus:ring-0 outline-none" />
-                    <button className="btn-default flex-none !rounded-full">
+                    <Link className="btn-default flex-none !rounded-full" href="/signup">
                       Obter cortes grátis
-                    </button>
+                    </Link>
                   </div>
                   <span className="text-gray-300 text-[14px]">ou</span>
-                  <button className="rainbow-gradient-btn without-shape-circle flex-none">
+                  <Link className="rainbow-gradient-btn without-shape-circle flex-none" href="/signup">
                     <span>Carregar arquivo</span>
-                  </button>
+                  </Link>
                 </div>
                 <div className="inner-shape">
                   <Image
@@ -280,7 +280,7 @@ const Home = () => {
                 </h2>
                 <Link
                   className="btn-default btn-large"
-                  href="/contact"
+                  href="/signup"
                 >
                   Teste Grátis Agora{" "}
                   <i className="fa-sharp fa-light fa-arrow-right ml--5"></i>

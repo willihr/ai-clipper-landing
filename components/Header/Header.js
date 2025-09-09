@@ -46,7 +46,7 @@ const Header = ({ headerTransparent, headerSticky, btnClass }) => {
           <div className="row align-items-center row--0">
             <div className="col-lg-2 col-md-6 col-6">
               <div className="logo">
-                <Link href="/home">
+                <Link href="/">
                   <Logo className="text-[#eee]" height={40} />
                 </Link>
               </div>
@@ -61,7 +61,7 @@ const Header = ({ headerTransparent, headerSticky, btnClass }) => {
             <div className="col-lg-2 col-md-6 col-6 position-static">
               <div className="header-right">
                 <div className="header-btn !block">
-                  <Link className={`${btnClass}`} href="/text-generator">
+                  <Link className={`${btnClass}`} href="/signup">
                     <span>Comece Grátis</span>
                   </Link>
                 </div>

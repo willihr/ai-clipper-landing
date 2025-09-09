@@ -20,7 +20,9 @@ const SignupPage = () => {
               <div className="col-lg-12 bg-color-blackest left-wrapper">
                 <div className="sign-up-box">
                   <div className="signup-box-top">
-                    <Logo className="text-[#eee]" height={50} />
+                    <Link href="/">
+                      <Logo className="text-[#eee]" height={50} />
+                    </Link>
                   </div>
                   <div className="signup-box-bottom">
                     <div className="signup-box-content">
@@ -106,9 +108,9 @@ const SignupPage = () => {
                     <div className="signup-box-footer">
                       <div className="bottom-text">
                         Já tem uma conta?{" "}
-                        <a className="btn-read-more ml--5" href="/signin">
+                        <Link className="btn-read-more ml--5" href="/signin">
                           <span>Entrar</span>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
