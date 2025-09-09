@@ -17,7 +17,7 @@ const SignupPage = () => {
         <div className="signup-area">
           <div className="wrapper">
             <div className="row">
-              <div className="col-lg-6 bg-color-blackest left-wrapper">
+              <div className="col-lg-12 bg-color-blackest left-wrapper">
                 <div className="sign-up-box">
                   <div className="signup-box-top">
                     <Logo className="text-[#eee]" height={50} />
@@ -114,7 +114,7 @@ const SignupPage = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-6 right-wrapper">
+              {/* <div className="col-lg-6 right-wrapper">
                 <div className="client-feedback-area">
                   <div className="single-feedback">
                     <div className="inner">
@@ -169,7 +169,7 @@ const SignupPage = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
