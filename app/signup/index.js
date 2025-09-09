@@ -24,7 +24,7 @@ const SignupPage = () => {
                   </div>
                   <div className="signup-box-bottom">
                     <div className="signup-box-content">
-                      <div className="social-btn-grp">
+                      {/* <div className="social-btn-grp">
                         <a className="btn-default btn-border" href="#">
                           <span className="icon-left">
                             <Image
@@ -52,6 +52,7 @@ const SignupPage = () => {
                         <hr />
                         <span>Or continue with</span>
                         <hr />
+                      </div> */}
                       </div>
                       <form>
                         <div className="input-section">
@@ -87,11 +88,11 @@ const SignupPage = () => {
                             placeholder="Confirm Password"
                           />
                         </div>
-                        <div className="forget-text">
+                        {/* <div className="forget-text">
                           <a className="btn-read-more" href="#">
                             <span>Forgot password</span>
                           </a>
-                        </div>
+                        </div> */}
                         <button type="submit" className="btn-default">
                           Sign Up
                         </button>
@@ -166,9 +167,6 @@ const SignupPage = () => {
               </div>
             </div>
           </div>
-          <Link className="close-button" href="/">
-            <i className="fa-sharp fa-regular fa-x"></i>
-          </Link>
         </div>
       </main>
     </>
