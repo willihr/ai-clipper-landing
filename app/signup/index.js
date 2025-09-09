@@ -54,7 +54,7 @@ const SignupPage = () => {
                         <hr />
                       </div> */}
                       <div className="section-title">
-                        <h4 className="title mb--0">Quase lá! Complete seu cadastro</h4>
+                        <h4 className="title mb-2">Quase lá! Complete seu cadastro</h4>
                         <p className="description">
                           Comece com nosso plano gratuito. Sem cartão de crédito.
                         </p>

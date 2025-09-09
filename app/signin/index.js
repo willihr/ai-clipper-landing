@@ -52,7 +52,7 @@ const SigninPage = () => {
                         <hr />
                       </div> */}
                       <div className="section-title">
-                        <h4 className="title mb--0">Bem-vindo(a) de volta!</h4>
+                        <h4 className="title mb-2">Bem-vindo(a) de volta!</h4>
                         <p className="description">
                           Digite seu e-mail e senha para continuar.
                         </p>
