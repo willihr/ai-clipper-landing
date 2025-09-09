@@ -53,13 +53,18 @@ const SignupPage = () => {
                         <span>Or continue with</span>
                         <hr />
                       </div> */}
+                      <div className="section-title">
+                        <h4 className="title mb--0">Quase lá! Complete seu cadastro</h4>
+                        <p className="description">
+                          Comece com nosso plano gratuito. Sem cartão de crédito.
+                        </p>
                       </div>
                       <form>
                         <div className="input-section">
                           <div className="icon">
                             <i className="feather-user"></i>
                           </div>
-                          <input type="text" placeholder="Enter Your Name" />
+                          <input type="text" placeholder="Digite seu nome" />
                         </div>
                         <div className="input-section mail-section">
                           <div className="icon">
@@ -67,7 +72,7 @@ const SignupPage = () => {
                           </div>
                           <input
                             type="email"
-                            placeholder="Enter email address"
+                            placeholder="Digite seu endereço de e-mail"
                           />
                         </div>
                         <div className="input-section password-section">
@@ -76,7 +81,7 @@ const SignupPage = () => {
                           </div>
                           <input
                             type="password"
-                            placeholder="Create Password"
+                            placeholder="Crie uma senha"
                           />
                         </div>{" "}
                         <div className="input-section password-section">
@@ -85,7 +90,7 @@ const SignupPage = () => {
                           </div>
                           <input
                             type="password"
-                            placeholder="Confirm Password"
+                            placeholder="Confirme a senha"
                           />
                         </div>
                         {/* <div className="forget-text">
@@ -94,15 +99,15 @@ const SignupPage = () => {
                           </a>
                         </div> */}
                         <button type="submit" className="btn-default">
-                          Sign Up
+                          Criar Conta Gratuita
                         </button>
                       </form>
                     </div>
                     <div className="signup-box-footer">
                       <div className="bottom-text">
-                        Do you have an account?
+                        Já tem uma conta?{" "}
                         <a className="btn-read-more ml--5" href="/signin">
-                          <span>Sign In</span>
+                          <span>Entrar</span>
                         </a>
                       </div>
                     </div>
