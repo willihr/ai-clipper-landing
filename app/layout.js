@@ -2,6 +2,7 @@
 
 import React, { useEffect } from "react";
 import { Sora } from "@next/font/google";
+import Clarity from '@microsoft/clarity';
 
 import "bootstrap/scss/bootstrap.scss";
 
@@ -26,6 +27,8 @@ export default function RootLayout({ children }) {
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
   }, []);
+
+  Clarity.init("t8cn2gjcvf");
 
   return (
     <html lang="en">
