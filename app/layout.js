@@ -2,7 +2,8 @@
 
 import React, { useEffect } from "react";
 import { Sora } from "@next/font/google";
-import Clarity from '@microsoft/clarity';
+import Clarity from "@microsoft/clarity";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 import "bootstrap/scss/bootstrap.scss";
 
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <GoogleTagManager gtmId="GTM-W68LHCNX" />
       <body className={sora.className} suppressHydrationWarning={true}>
         {children}
       </body>
