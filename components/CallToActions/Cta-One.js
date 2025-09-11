@@ -38,7 +38,7 @@ const CtaOne = () => {
           </div>
         </div>
         <div className="col-lg-4">
-          <div className="right-content">
+          <div className="right-content text-center lg:text-right">
             <div
               className="call-to-btn text-start text-lg-end sal-animate"
               data-sal="slide-up"
@@ -53,7 +53,7 @@ const CtaOne = () => {
                   alt="Group Image"
                 />
               </div>
-              <Link className="btn-default" href="/signup">
+              <Link className="btn-default whitespace-nowrap" href="/signup">
                 Multiplicar meu Conteúdo
               </Link>
             </div>

@@ -62,7 +62,7 @@ const Header = ({ headerTransparent, headerSticky, btnClass }) => {
               <div className="header-right">
                 <div className="header-btn !block">
                   <Link className={`${btnClass}`} href="/signup">
-                    <span>Comece Grátis</span>
+                    <span className="whitespace-nowrap max-md:!px-5">Comece Grátis</span>
                   </Link>
                 </div>
 

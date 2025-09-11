@@ -55,12 +55,11 @@ const Home = () => {
           <div className="row justify-content-center">
             <div className="col-lg-12">
               <div className="inner text-center mt--140">
-                <h1 className="title display-one !text-[64px] !leading-none">
-                  Transforme vídeos longos em
-                  <br />{" "}
+                <h1 className="title display-one !text-[36px] md:!text-[44px] lg:!text-[48px] xl:!text-[56px] 2xl:!text-[64px] !leading-none">
+                  Transforme vídeos longos em{" "}
                   <span className="header-caption">
                     <span className="cd-headline rotate-1">
-                      <span className="cd-words-wrapper !w-[510px] !text-[64px]">
+                      <span className="cd-words-wrapper !w-[290px] !text-[36px] md:!w-[350px] md:!text-[44px] lg:!w-[380px] lg:!text-[48px] xl:!w-[450px] xl:!text-[56px] 2xl:!w-[510px] 2xl:!text-[64px]">
                         <b
                           className={
                             visibleIndex === 0
@@ -72,7 +71,7 @@ const Home = () => {
                         </b>
                         <b
                           className={
-                            visibleIndex === 2
+                            visibleIndex === 1
                               ? "is-visible theme-gradient !normal-case tracking-[-0.03em] pr-[0.03em]"
                               : "is-hidden theme-gradient !normal-case tracking-[-0.03em] pr-[0.03em]"
                           }
@@ -81,7 +80,7 @@ const Home = () => {
                         </b>
                         <b
                           className={
-                            visibleIndex === 1
+                            visibleIndex === 2
                               ? "is-visible theme-gradient !normal-case tracking-[0.03em]"
                               : "is-hidden theme-gradient !normal-case tracking-[0.03em]"
                           }
@@ -102,12 +101,12 @@ const Home = () => {
                   </span>{" "}
                   em minutos
                 </h1>
-                <p className="description !text-[20px] opacity-80">
+                <p className="description !text-[16px] md:!text-[20px] opacity-80">
                   A ViroClip entende seu conteúdo, gera cortes prontos para viralizar e os publica em todas as suas redes sociais com poucos cliques.
                 </p>
 
-                <div className="flex items-center space-x-4 w-full max-w-[680px]">
-                  <div className="flex-grow bg-[#2D313E] rounded-full p-2 flex items-center shadow-lg">
+                <div className="flex items-center space-x-4 space-y-3 w-auto flex-col md:flex-row">
+                  <div className="flex-grow bg-[#2D313E] rounded-full p-2 flex items-center shadow-lg max-w-[430px]">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-gray-400 mx-3 flex-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                     </svg>
@@ -121,7 +120,7 @@ const Home = () => {
                     <span>Carregar arquivo</span>
                   </Link>
                 </div>
-                <div className="inner-shape">
+                <div className="inner-shape hidden lg:!block">
                   <Image
                     src={shapeOne}
                     width={100}
@@ -154,7 +153,7 @@ const Home = () => {
               </div>
             </div>
             <div className="col-lg-9 col-xl-9 justify-content-center">
-              <div className="slider-frame !bg-cover before:!bg-cover">
+              <div className="slider-frame !bg-cover before:!bg-cover max-md:!p-0">
                 <video className="w-full" src="/hero-banner-video.webm" autoPlay muted loop />
               </div>
             </div>
@@ -298,7 +297,7 @@ const Home = () => {
                   alt="collabration-image"
                 />
                 <div className="logo-section">
-                  <div className="center-logo !p-[27px]">
+                  <div className="center-logo !p-[10px] lg:!p-[27px]">
                     <SquareLogo />
                   </div>
                 </div>
