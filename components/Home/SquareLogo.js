@@ -3,8 +3,8 @@ const SquareLogo = (props) => {
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="211.78 429.99 186.88 163.12" {...props}>
             <defs>
                 <linearGradient id="linear_gradient_n4jt3" x1="0%" x2="100%" y1="0%" y2="100%">
-                    <stop offset="0%" stop-color="#8c65f6" />
-                    <stop offset="100%" stop-color="#cc9aff" />
+                    <stop offset="0%" stopColor="#8c65f6" />
+                    <stop offset="100%" stopColor="#cc9aff" />
                 </linearGradient>
             </defs>
             <g fill="url(#linear_gradient_n4jt3)">
