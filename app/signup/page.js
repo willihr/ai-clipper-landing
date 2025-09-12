@@ -2,8 +2,9 @@ import BackToTop from "../backToTop";
 import SignupPage from "./index";
 
 export const metadata = {
-  title: "Sign Up - || AiWave - AI SaaS Website NEXTJS14 UI Kit",
-  description: "AiWave - AI SaaS Website NEXTJS14 UI Kit",
+  title: "Crie sua Conta Grátis | ViroClip",
+  description:
+    "Crie sua conta gratuita no ViroClip em segundos. Comece hoje a transformar seus vídeos em cortes virais para redes sociais. Não é necessário cartão de crédito.",
 };
 
 const SignupLayout = () => {
