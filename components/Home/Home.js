@@ -102,7 +102,7 @@ const Home = () => {
                   em minutos
                 </h1>
                 <p className="description !text-[16px] md:!text-[20px] opacity-80">
-                  A ViroClip entende seu conteúdo, gera cortes prontos para viralizar e os publica em todas as suas redes sociais com poucos cliques.
+                  O ViroClip entende seu conteúdo, gera cortes prontos para viralizar e os publica em todas as suas redes sociais com poucos cliques.
                 </p>
 
                 <div className="flex items-center space-x-4 space-y-3 w-auto flex-col md:flex-row">
