@@ -32,6 +32,7 @@ import SquareLogo from "./SquareLogo";
 
 const Home = () => {
   const [visibleIndex, setVisibleIndex] = useState(0);
+  const [inputUrl, setInputUrl] = useState("");
 
   useEffect(() => {
     Sal();
@@ -110,13 +111,25 @@ const Home = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-gray-400 mx-3 flex-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                     </svg>
-                    <input type="text" placeholder="Cole um link aqui" className="w-full !pl-0 !rounded-none bg-transparent text-gray-700 placeholder-gray-500 text-base !border-none focus:ring-0 outline-none" />
-                    <Link className="btn-default flex-none !rounded-full" href="/signup">
+                    <input 
+                      type="text" 
+                      placeholder="Cole um link aqui" 
+                      value={inputUrl}
+                      onChange={(e) => setInputUrl(e.target.value)}
+                      className="w-full !pl-0 !rounded-none bg-transparent text-gray-700 placeholder-gray-500 text-base !border-none focus:ring-0 outline-none" 
+                    />
+                    <Link 
+                      className="btn-default flex-none !rounded-full" 
+                      href={`/signup${inputUrl ? `?url=${encodeURIComponent(inputUrl)}` : ''}`}
+                    >
                       Obter cortes grátis
                     </Link>
                   </div>
                   <span className="text-gray-300 text-[14px]">ou</span>
-                  <Link className="rainbow-gradient-btn without-shape-circle flex-none" href="/signup">
+                  <Link 
+                    className="rainbow-gradient-btn without-shape-circle flex-none" 
+                    href={`/signup${inputUrl ? `?url=${encodeURIComponent(inputUrl)}` : ''}`}
+                  >
                     <span>Carregar arquivo</span>
                   </Link>
                 </div>

@@ -3,7 +3,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { doc, setDoc, serverTimestamp } from "firebase/firestore";
 import { auth, db } from "../../context/firebase";
@@ -11,6 +11,7 @@ import Logo from "../../components/Header/Logo";
 
 const SignupPage = () => {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -63,6 +64,7 @@ const SignupPage = () => {
       await setDoc(doc(db, "users", userCredential.user.uid), {
         name: formData.name,
         email: formData.email,
+        videoUrl: decodeURIComponent(searchParams.get('url') || '') || null,
         createdAt: serverTimestamp()
       });
 
