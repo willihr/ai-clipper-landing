@@ -288,7 +288,7 @@ const Home = () => {
                   <span className="theme-gradient">Sua Máquina de Conteúdo Viral</span>
                 </h4>
                 <h2 className="title mb--20">
-                  Um vídeo rende um mês inteiro de clipes virais
+                  Um vídeo rende um mês inteiro de cortes virais
                 </h2>
                 <Link
                   className="btn-default btn-large"
