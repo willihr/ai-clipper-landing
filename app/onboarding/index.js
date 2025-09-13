@@ -71,7 +71,7 @@ const OnboardingPage = () => {
           <div className="wrapper">
             <div className="row">
               <div className="col-lg-12 bg-color-blackest left-wrapper">
-                <div className="sign-up-box">
+                <div className="sign-up-box !p-[30px]">
                   <div className="signup-box-top">
                     <Link href="/">
                       <Logo className="text-[#eee]" height={50} />
@@ -139,7 +139,7 @@ const OnboardingPage = () => {
                         </div>
                       </div>
 
-                      <div className="d-flex justify-content-between items-center mt-4">
+                      <div className="d-flex justify-content-between items-center mt-4 gap-[12px]">
                         <button
                           className="btn-default btn-border"
                           onClick={handlePrev}
@@ -151,7 +151,7 @@ const OnboardingPage = () => {
                         >
                           Anterior
                         </button>
-                        <span className="text-white/70">
+                        <span className="text-white/70 flex-none">
                           {currentStep + 1} de {questions.length}
                         </span>
                       </div>

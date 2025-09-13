@@ -16,7 +16,7 @@ const SigninPage = () => {
           <div className="wrapper">
             <div className="row">
               <div className="col-lg-12 bg-color-blackest left-wrapper">
-                <div className="sign-up-box">
+                <div className="sign-up-box !p-[30px]">
                   <div className="signup-box-top">
                     <Link href="/">
                       <Logo className="text-[#eee]" height={50} />
