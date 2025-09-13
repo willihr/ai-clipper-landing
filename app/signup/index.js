@@ -1,16 +1,93 @@
 
+"use client";
 
-import Image from "next/image";
+import { useState } from "react";
 import Link from "next/link";
-
-import logo from "../../public/images/logo/logo.png";
-import userImg from "../../public/images/team/team-02sm.jpg";
-import brandImg from "../../public/images/brand/brand-t.png";
-import google from "../../public/images/sign-up/google.png";
-import facebook from "../../public/images/sign-up/facebook.png";
+import { useRouter } from "next/navigation";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { doc, setDoc, serverTimestamp } from "firebase/firestore";
+import { auth, db } from "../../context/firebase";
 import Logo from "../../components/Header/Logo";
 
 const SignupPage = () => {
+  const router = useRouter();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: ""
+  });
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+    if (error) setError("");
+  };
+
+  const validateForm = () => {
+    if (formData.password.length < 6) {
+      setError("A senha deve ter pelo menos 6 caracteres");
+      return false;
+    }
+    if (formData.password !== formData.confirmPassword) {
+      setError("As senhas não coincidem");
+      return false;
+    }
+    return true;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    if (!validateForm()) return;
+
+    setLoading(true);
+    setError("");
+
+    try {
+      const userCredential = await createUserWithEmailAndPassword(
+        auth, 
+        formData.email, 
+        formData.password
+      );
+      
+      await updateProfile(userCredential.user, {
+        displayName: formData.name
+      });
+
+      await setDoc(doc(db, "users", userCredential.user.uid), {
+        name: formData.name,
+        email: formData.email,
+        createdAt: serverTimestamp()
+      });
+
+      router.push("/onboarding");
+    } catch (error) {
+      console.error("Erro ao criar conta:", error);
+      
+      switch (error.code) {
+        case "auth/email-already-in-use":
+          setError("Este e-mail já está sendo usado por outra conta");
+          break;
+        case "auth/invalid-email":
+          setError("E-mail inválido");
+          break;
+        case "auth/weak-password":
+          setError("A senha é muito fraca");
+          break;
+        default:
+          setError("Erro ao criar conta. Tente novamente.");
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <>
       <main className="page-wrapper">
@@ -61,12 +138,34 @@ const SignupPage = () => {
                           Comece com nosso plano gratuito. Sem cartão de crédito.
                         </p>
                       </div>
-                      <form>
+                      
+                      {error && (
+                        <div className="alert alert-danger mb-3" style={{ 
+                          backgroundColor: "#f8d7da",
+                          color: "#721c24",
+                          padding: "12px",
+                          borderRadius: "8px",
+                          border: "1px solid #f5c6cb",
+                          marginBottom: "1rem"
+                        }}>
+                          {error}
+                        </div>
+                      )}
+
+                      <form onSubmit={handleSubmit}>
                         <div className="input-section">
                           <div className="icon">
                             <i className="feather-user"></i>
                           </div>
-                          <input type="text" placeholder="Digite seu nome" />
+                          <input 
+                            type="text" 
+                            name="name"
+                            value={formData.name}
+                            onChange={handleInputChange}
+                            placeholder="Digite seu nome"
+                            disabled={loading}
+                            required
+                          />
                         </div>
                         <div className="input-section mail-section">
                           <div className="icon">
@@ -74,7 +173,12 @@ const SignupPage = () => {
                           </div>
                           <input
                             type="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleInputChange}
                             placeholder="Digite seu endereço de e-mail"
+                            disabled={loading}
+                            required
                           />
                         </div>
                         <div className="input-section password-section">
@@ -83,27 +187,64 @@ const SignupPage = () => {
                           </div>
                           <input
                             type="password"
-                            placeholder="Crie uma senha"
+                            name="password"
+                            value={formData.password}
+                            onChange={handleInputChange}
+                            placeholder="Crie uma senha (mín. 6 caracteres)"
+                            disabled={loading}
+                            required
                           />
-                        </div>{" "}
+                        </div>
                         <div className="input-section password-section">
                           <div className="icon">
                             <i className="fa-sharp fa-regular fa-lock"></i>
                           </div>
                           <input
                             type="password"
+                            name="confirmPassword"
+                            value={formData.confirmPassword}
+                            onChange={handleInputChange}
                             placeholder="Confirme a senha"
+                            disabled={loading}
+                            required
                           />
                         </div>
-                        {/* <div className="forget-text">
-                          <a className="btn-read-more" href="#">
-                            <span>Forgot password</span>
-                          </a>
-                        </div> */}
-                        <button type="submit" className="btn-default">
-                          Criar Conta Gratuita
+                        
+                        <button 
+                          type="submit" 
+                          className="btn-default"
+                          disabled={loading}
+                          style={{
+                            opacity: loading ? 0.7 : 1,
+                            cursor: loading ? "not-allowed" : "pointer",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            gap: "8px"
+                          }}
+                        >
+                          {loading && (
+                            <div 
+                              style={{
+                                width: "16px",
+                                height: "16px",
+                                border: "2px solid #ffffff",
+                                borderTop: "2px solid transparent",
+                                borderRadius: "50%",
+                                animation: "spin 1s linear infinite"
+                              }}
+                            />
+                          )}
+                          {loading ? "Criando conta..." : "Criar Conta Gratuita"}
                         </button>
                       </form>
+                      
+                      <style jsx>{`
+                        @keyframes spin {
+                          0% { transform: rotate(0deg); }
+                          100% { transform: rotate(360deg); }
+                        }
+                      `}</style>
                     </div>
                     <div className="signup-box-footer">
                       <div className="bottom-text">
